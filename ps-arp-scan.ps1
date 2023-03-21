@@ -1,6 +1,6 @@
 ## Powershell sudo arp-scan -l 
 $FileOut = ".\Computers.csv"
-## Ping subnet
+## Ping subnet change IP in quotes below to your corresbonding subnet
 $Subnet = "10.1.10."
 1..254|ForEach-Object{
     Start-Process -WindowStyle Hidden ping.exe -Argumentlist "-n 1 -l 0 -f -i 2 -w 1 -4 $SubNet$_"
